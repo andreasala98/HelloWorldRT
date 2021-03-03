@@ -4,9 +4,19 @@ namespace HelloWorld
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            if (args.Length == 0)
+
+                Console.WriteLine("Hello World!");
+
+            else
+            {
+                string myName = args[0];
+                Console.WriteLine("Hello World! Written by " + myName);
+            }
+
+            return 0;
         }
     }
 }
