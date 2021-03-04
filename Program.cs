@@ -2,8 +2,28 @@
 
 namespace HelloWorld
 {
-    class Program
+
+
+    class Car
     {
+
+        public string Name {
+            get;
+        }
+
+        public Car()
+        {
+            Name = "default_name";
+        }
+        public Car (string s)
+        {
+            Name = s;
+        }
+
+    }
+
+    class Program { 
+
         static int Main(string[] args)
         {
             if (args.Length == 0)
@@ -16,7 +36,17 @@ namespace HelloWorld
                 Console.WriteLine("Hello World! Written by " + myName);
             }
 
+            Car Polo = new Car("Camilla");
+            Console.WriteLine("La mia auto si chiama " + Polo.Name);
+
+      
+            Console.WriteLine("Non posso cambiare il nome!");
+
             return 0;
         }
+
+
     }
+
+
 }
