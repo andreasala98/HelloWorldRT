@@ -11,6 +11,11 @@ namespace HelloWorld
             get;
         }
 
+        public int Year
+        {
+            get; set;
+        }
+
         public Car()
         {
             Name = "default_name";
@@ -18,6 +23,12 @@ namespace HelloWorld
         public Car (string s)
         {
             Name = s;
+        }
+
+        public Car (string s, int y)
+        {
+            Name = s;
+            Year = y;
         }
 
     }
@@ -36,11 +47,14 @@ namespace HelloWorld
                 Console.WriteLine("Hello World! Written by " + myName);
             }
 
-            Car Polo = new Car("Camilla");
-            Console.WriteLine("La mia auto si chiama " + Polo.Name);
+            Car Polo = new Car("Camilla",2014);
+            Console.WriteLine("La mia auto del " + Polo.Year + " si chiama " + Polo.Name);
 
       
             Console.WriteLine("Non posso cambiare il nome!");
+            Polo.Year = 2021;
+
+            Console.WriteLine("Ora la mia auto è del " + Polo.Year);
 
             return 0;
         }
